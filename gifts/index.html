@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><title>Rosedale Spiritual Gifts Test</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Find where God has wired you to serve at Rosedale. About ten minutes.">
+<meta name="description" content="Find where God has wired you to serve at Rosedale. About six minutes.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rosedale Baptist Church">
 <meta property="og:title" content="Rosedale Spiritual Gifts Test">
-<meta property="og:description" content="Find where God has wired you to serve at Rosedale. About ten minutes.">
+<meta property="og:description" content="Find where God has wired you to serve at Rosedale. About six minutes.">
 <meta property="og:image" content="https://rosedale-ministries.github.io/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:url" content="https://rosedale-ministries.github.io/gifts/">
@@ -212,6 +212,7 @@ section{display:flex;flex-direction:column;gap:16px}
     </section>
     <div class="row"><button class="btn ghost" id="again">Retake</button></div>
     <p class="foot">Rosedale Baptist Church · 9202 Philadelphia Road, Baltimore, MD 21237 · rosedalebaptist.org</p>
+    <p class="foot" style="border-top:0;padding-top:0"><a href="https://rosedale-ministries.github.io/?view=privacy" style="color:inherit">Privacy Policy</a> · <a href="https://rosedale-ministries.github.io/?view=terms" style="color:inherit">Terms of Use</a> · <a href="https://rosedale-ministries.github.io/?view=access" style="color:inherit">Accessibility</a></p>
   </div>
 </div>
 
@@ -423,12 +424,12 @@ function send(r){
     " | Gift profile: "+keys.slice().sort((a,b)=>gs[b]-gs[a]).map(g=>GIFTS[g].name+" "+Math.round(gs[g]*100)).join(", ");
   let done=false;
   const ok=()=>{if(done)return;done=true;st.sent=true;save();sentState()};
-  const fail=()=>{if(done)return;done=true;$("sentHead").textContent="We couldn't send your results";$("sentNote").textContent="Please check your connection and tap Retake, or show this screen to a pastor on Sunday."};
+  const fail=()=>{if(done)return;done=true;$("sentHead").textContent="We couldn't send your results";$("sentNote").textContent="Please check your connection and reload this page. Your answers are saved, and we will try sending again."};
   try{google.script.run.withSuccessHandler(ok).withFailureHandler(fail).submitResults({first:st.first,last:st.last,email:st.email,phone:st.phone,results:summary})}catch(e){fail()}
 }
 $("again").onclick=()=>{st={i:0,a:{},heart:[],first:st.first,last:st.last,email:st.email,phone:st.phone};save();show("intro");$("resumeNote").textContent=""};
 
-if(st.done&&Object.keys(st.a).length===ORDER.length){render(compute())}
+if(st.done&&Object.keys(st.a).length===ORDER.length){const _r=compute();render(_r);if(!st.sent)send(_r)}
 </script>
 
 </body></html>
