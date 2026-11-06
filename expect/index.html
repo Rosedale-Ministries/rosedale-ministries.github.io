@@ -394,7 +394,7 @@ html.noscroll,html.noscroll body{overflow:hidden}
    <div class="jsbody">
     <span class="eyebrow">After you submit</span>
     <ol class="tl">
-     <li><b>Within the hour</b><span>A pastor texts and emails you a personal welcome.</span></li>
+     <li><b>Right away</b><span>A pastor emails you a personal welcome, with a text to follow.</span></li>
      <li><b>Gifts test</b><span>A short test that affirms where God has wired you to serve.</span></li>
      <li><b>Your team lead calls</b><span>They'll get to know you and set up a time to shadow.</span></li>
      <li><b>Your first Sunday</b><span>You'll serve alongside someone who's done it before.</span></li>
@@ -491,7 +491,7 @@ html.noscroll,html.noscroll body{overflow:hidden}
  <div class="head"><span class="eyebrow">Step by step</span><h2>Here's how it works.</h2></div>
  <ol class="extl">
   <li><span class="pn">1</span><div><h3>You fill out the interest form</h3><p>Pick the teams that interest you. It takes about two minutes.</p></div></li>
-  <li><span class="pn">2</span><div><h3>A welcome text and email</h3><p>Within the hour a pastor reaches out personally with your next step.</p></div></li>
+  <li><span class="pn">2</span><div><h3>A welcome text and email</h3><p>Soon after you sign up, a pastor reaches out personally with your next step.</p></div></li>
   <li><span class="pn">3</span><div><h3>Take the spiritual gifts test</h3><p>Your results help us place you where God has wired you to serve.</p></div></li>
   <li><span class="pn">4</span><div><h3>Your team lead reaches out</h3><p>They'll get to know you and set up a time for you to shadow.</p></div></li>
   <li><span class="pn">5</span><div><h3>Your first serving request</h3><p>You'll get a text and an email from Church Community Builder asking you to serve on a date. Tap the link and choose Accept.</p></div></li>
@@ -514,7 +514,7 @@ html.noscroll,html.noscroll body{overflow:hidden}
  <h3>Why we collect it</h3><p>We use your information only to welcome you, follow up with you about serving, place you on a team, schedule you, and send you reminders. We may contact you by email, phone call, or text message about serving at Rosedale.</p>
  <h3>Text messages</h3><p>By giving us your mobile number you agree to receive text messages from Rosedale about serving. Message frequency varies, and message and data rates may apply. Reply STOP at any time to stop receiving texts. Mobile numbers and text messaging consent are never shared with or sold to third parties or affiliates for marketing purposes.</p>
  <h3>What we never do</h3><p>We never sell, rent, or trade your personal information. We share it only with the Rosedale pastors and team leads who serve with you.</p>
- <h3>Where it is kept</h3><p>Your information is stored in Church Community Builder, our church management system, and in our Google Workspace account. Videos on this site are hosted by YouTube, which may set its own cookies when you play a video. Each of these services has its own privacy policy.</p>
+ <h3>Where it is kept</h3><p>Your information is stored in Church Community Builder, our church management system, and in our Google Workspace account. Videos play directly on this site and do not track you. Each of these services has its own privacy policy.</p>
  <h3>Your choices</h3><p>You can ask us to update or delete your information, or stop contacting you, at any time. Call or text <a href="tel:4433718470">443.371.8470</a> and a pastor will take care of it.</p>
  <h3>Children</h3><p>This site is meant for adults and students who are signing up to serve. We do not knowingly collect information from children under 13.</p>
  <h3>Changes</h3><p>If we change this policy we will update the date at the top of this page.</p>
@@ -524,13 +524,13 @@ html.noscroll,html.noscroll body{overflow:hidden}
  <h3>Using this site</h3><p>This site is provided by Rosedale Baptist Church to help people serve at Rosedale. Please use it only for that purpose and only submit information that is true and your own.</p>
  <h3>Our content</h3><p>The text, photos, videos, and graphics on this site belong to Rosedale Baptist Church unless noted otherwise. Please do not copy or reuse them without permission.</p>
  <h3>Team lead area</h3><p>The team lead hub is for approved Rosedale serve team leads. Information about volunteers in the hub is private and should only be used to care for and schedule your team.</p>
- <h3>Other websites</h3><p>This site uses and links to services run by others, such as Church Community Builder, Planning Center, Google, and YouTube. We are not responsible for their content or practices.</p>
+ <h3>Other websites</h3><p>This site uses and links to services run by others, such as Church Community Builder, Planning Center, Google, and GitHub. We are not responsible for their content or practices.</p>
  <h3>No guarantees</h3><p>We work to keep this site accurate and available, but it is provided as is, and we cannot promise it will always be error free or online.</p>
  <h3>Questions</h3><p>Call or text <a href="tel:4433718470">443.371.8470</a> and a pastor will follow up with you.</p>
 </div></section>
 <section class="block legal" data-legal="access"><div class="wrap narrow">
  <span class="eyebrow">Serve at Rosedale</span><h1>Accessibility</h1><p class="upd">Last updated November 5, 2026</p>
- <p>Rosedale Baptist Church wants everyone to be able to use this site. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA, and we keep working to improve. Some parts of the site, like the interest form and videos, are provided by other services and may not fully meet these standards.</p>
+ <p>Rosedale Baptist Church wants everyone to be able to use this site. We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA, and we keep working to improve. Our videos do not have captions yet, and we are working on adding them. Some parts of the site, like the interest form, are provided by other services and may not fully meet these standards.</p>
  <p>If anything on this site is hard for you to use, call or text <a href="tel:4433718470">443.371.8470</a>. A pastor will help you sign up another way and we will work to fix the problem.</p>
 </div></section>
 <section class="block" style="padding-top:0"><div class="wrap narrow"><a class="btn blue" href="#serve" data-view="serve" data-top="1">Back to Serve at Rosedale <b>→</b></a></div></section>
@@ -574,7 +574,7 @@ document.addEventListener('click',function(e){var a=e.target.closest('[data-view
 if(location.hash==='#expect')showExpect();if(/^#(privacy|terms|access)$/.test(location.hash))showLegal(location.hash.slice(1));
 document.getElementById('toServe').addEventListener('click',function(e){e.preventDefault();e.stopPropagation();showServe()});
 try{if(window.google&&google.script&&google.script.url){google.script.url.getLocation(function(l){var v=(l.parameter&&l.parameter.view)||l.hash;if(v==='serve')showServe();else if(v==='expect')showExpect();else if(v==='privacy'||v==='terms'||v==='access')showLegal(v)})}}catch(x){}
-if(!(window.google&&google.script&&google.script.url)){var _v=(new URLSearchParams(location.search)).get('view')||window.__DEFAULT_VIEW||'';if(_v==='serve')showServe();else if(_v==='expect')showExpect();else if(_v==='privacy'||_v==='terms'||_v==='access')showLegal(_v)}
+if(!(window.google&&google.script&&google.script.url)){var _v=(new URLSearchParams(location.search)).get('view')||((/^#(privacy|terms|access|expect)$/.test(location.hash))?location.hash.slice(1):'')||window.__DEFAULT_VIEW||'';if(_v==='serve')showServe();else if(_v==='expect')showExpect();else if(_v==='privacy'||_v==='terms'||_v==='access')showLegal(_v)}
 document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(document.getElementById(id)){e.preventDefault();if(document.body.classList.contains('expect')){showServe();setTimeout(function(){go(id)},400)}else go(id)}});
 // When the form is submitted the CCB frame loads a new page: bring up the gifts video.
 var loads=0,done=false;
@@ -623,7 +623,7 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es
     <div class="vwrap"><div id="fExpect"></div></div>
    </section>
    <section class="fs" data-s="4">
-    <div class="fdone"><div class="fcheck">✓</div><h3>You're all set.</h3><p class="fsub">A pastor will text and email you within the hour with your next step. We're so glad you said yes.</p>
+    <div class="fdone"><div class="fcheck">✓</div><h3>You're all set.</h3><p class="fsub">Once your form is in, a pastor will email and text you with your next step. We're so glad you said yes.</p>
     <a class="btn blue" href="#teams" id="fTeams">Explore the teams</a></div>
    </section>
   </div>
