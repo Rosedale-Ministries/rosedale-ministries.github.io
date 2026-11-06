@@ -305,6 +305,7 @@ html.noscroll,html.noscroll body{overflow:hidden}
 .fs{display:none}.fs.on{display:block;animation:fin .25s ease}
 .fs h3{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.5px;line-height:1.15;margin-bottom:8px}
 .fsub{color:var(--muted);font-size:16px;margin-bottom:18px;max-width:640px}
+.gtest{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:16px;padding:18px 20px;border-radius:18px;background:var(--sky2,#E3F2FD);border:1px solid #CFE6F7}.gtest b{display:block;font-size:16px;font-weight:800;color:var(--navy,#063A63)}.gtest span{font-size:14px;color:var(--muted)}.gnote{font-size:13px;color:var(--muted);margin:10px 2px 4px}@media(max-width:640px){.gtest .btn{width:100%;justify-content:center}}
 .fs .vwrap{margin-top:14px;border-radius:18px;box-shadow:none}
 .fform{border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .fform iframe{display:block;width:100%;height:1150px;border:0;background:#fff}
@@ -611,8 +612,10 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es
    </section>
    <section class="fs" data-s="2">
     <span class="eyebrow">Step 3 of 4</span><h3>Thank you. Next up, your gifts test.</h3>
-    <p class="fsub">Watch this, then look for a text and email from a pastor with your link to the spiritual gifts test.</p>
+    <p class="fsub">Watch this, then take the test right now. It takes about ten minutes on your phone.</p>
     <div class="vwrap"><div id="fGifts"></div></div>
+    <div class="gtest"><div><b>Spiritual Gifts Test</b><span>About 10 minutes. English or Spanish.</span></div><a class="btn blue" id="fGiftsGo" onclick="document.querySelectorAll('video').forEach(function(v){v.pause()})" href="https://bit.ly/RosedaleGifts" target="_blank" rel="noopener">Take the gifts test now <b>→</b></a></div>
+    <p class="gnote">Not a good time? No problem. Look for a text and email from a pastor with your link.</p>
    </section>
    <section class="fs" data-s="3">
     <span class="eyebrow">Step 4 of 4</span><h3>Here's what to expect.</h3>
@@ -620,7 +623,7 @@ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es
     <div class="vwrap"><div id="fExpect"></div></div>
    </section>
    <section class="fs" data-s="4">
-    <div class="fdone"><div class="fcheck">✓</div><h3>You're all set.</h3><p class="fsub">A pastor will text and email you within the hour with your gifts test. We're so glad you said yes.</p>
+    <div class="fdone"><div class="fcheck">✓</div><h3>You're all set.</h3><p class="fsub">A pastor will text and email you within the hour with your next step. We're so glad you said yes.</p>
     <a class="btn blue" href="#teams" id="fTeams">Explore the teams</a></div>
    </section>
   </div>
