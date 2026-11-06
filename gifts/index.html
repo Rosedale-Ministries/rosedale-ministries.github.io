@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Rosedale Spiritual Gifts Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Find where God has wired you to serve at Rosedale. About ten minutes.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rosedale Baptist Church">
+<meta property="og:title" content="Rosedale Spiritual Gifts Test">
+<meta property="og:description" content="Find where God has wired you to serve at Rosedale. About ten minutes.">
+<meta property="og:image" content="https://rosedale-ministries.github.io/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rosedale-ministries.github.io/gifts/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://rosedale-ministries.github.io/icon.png"><link rel="apple-touch-icon" href="https://rosedale-ministries.github.io/icon.png">
+<script>(function(){var API='https://script.google.com/macros/s/AKfycbxi3nWq6JMty4DPokLJowHbbj1AHiKbCm9IW2GuVZ8lXYkTmncvnNMqlcvzQPDGHg-HEA/exec';
+function mk(s,f){return new Proxy({},{get:function(_,k){if(k==='withSuccessHandler')return function(h){return mk(h,f)};if(k==='withFailureHandler')return function(h){return mk(s,h)};
+ return function(){var a=[].slice.call(arguments);fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({fn:k,args:a})})
+  .then(function(r){return r.json()}).then(function(d){if(d&&d.ok){if(s)s(d.r)}else throw new Error(d&&d.error)}).catch(function(e){if(f)f(e)})}}})}
+window.google=window.google||{};window.google.script={run:mk(null,null)};window.__RPC_SRC=document.currentScript?document.currentScript.textContent:'';})();
+</script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap">
+<style>
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0}img{max-width:100%}
+:root{
+  --bg:#FFFFFF; --ink:#010B13; --muted:#4B5A68; --line:#DCE4EB; --panel:#F2F6F9;
+  --blue:#22ABFF; --blue-text:#0071B8; --on-blue:#010B13; --sun:#FBAF00; --bad:#C2410C;
+  --band:#010B13; --band-ink:#FFFFFF; --band-muted:#A9B8C5;
+  --display:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;
+  --body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#010B13; --ink:#FFFFFF; --muted:#9DAEBD; --line:#1B2A37; --panel:#091723; --bad:#FB923C;
+  --blue-text:#22ABFF; --band:#FFFFFF; --band-ink:#010B13; --band-muted:#4B5A68; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#010B13; --ink:#FFFFFF; --muted:#9DAEBD; --line:#1B2A37; --panel:#091723; --bad:#FB923C;
+  --blue-text:#22ABFF; --band:#FFFFFF; --band-ink:#010B13; --band-muted:#4B5A68; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;font-family:var(--display);letter-spacing:.08em;font-size:1.15rem}
+.brand small{font-family:var(--body);font-size:.68rem;letter-spacing:.16em;font-weight:700;color:var(--muted);text-transform:uppercase}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--blue);margin-right:8px;vertical-align:-1px}
+
+.band{background:var(--band);color:var(--band-ink);padding:32px 24px;border-radius:4px;display:flex;flex-direction:column;gap:14px}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+h1,h2{font-family:var(--display);font-weight:400;line-height:.92;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(3.2rem,13vw,5.4rem)}
+h2{font-size:clamp(2rem,7vw,2.6rem)}
+.mark{box-shadow:inset 0 -.2em 0 var(--sun)}
+.band p{margin:0;color:var(--band-muted);max-width:60ch}
+p{margin:0}
+
+.areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.areas div{background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.areas b{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.02em;line-height:1}
+.areas span{font-size:.82rem;color:var(--muted)}
+@media (max-width:420px){.areas{grid-template-columns:1fr}}
+
+.btn{font:700 .95rem var(--body);letter-spacing:.04em;border:0;border-radius:4px;padding:16px 22px;cursor:pointer;background:var(--blue);color:var(--on-blue);text-transform:uppercase}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn:focus-visible,.opt:focus-visible,.link:focus-visible,.pill:focus-within{outline:3px solid var(--sun);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.note{font-size:.85rem;color:var(--muted)}
+.err{font-size:.88rem;font-weight:700;color:var(--bad)}
+
+.progress{display:flex;flex-direction:column;gap:8px}
+.progress .meta{display:flex;justify-content:space-between;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--blue);width:0;transition:width .25s ease}
+.q{font-size:clamp(1.35rem,4.6vw,1.75rem);font-weight:700;line-height:1.3;text-wrap:balance;min-height:3.9em}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;font:600 1rem var(--body);color:var(--ink);background:var(--panel);border:2px solid transparent;border-radius:4px;padding:14px 16px;cursor:pointer}
+.opt:hover{border-color:var(--blue)}
+.opt.on{border-color:var(--blue);background:var(--bg)}
+.opt kbd{font:400 1.3rem var(--display);width:1.6em;color:var(--blue-text)}
+.link{background:none;border:0;padding:6px 0;color:var(--muted);font:700 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.link:hover{color:var(--ink)}
+
+.heart{display:flex;flex-direction:column;gap:22px}
+.hgroup{display:flex;flex-direction:column;gap:10px}
+.hgroup b{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.02em;line-height:1}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative;display:inline-flex}
+.pill input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.pill span{font-weight:700;font-size:.9rem;padding:10px 16px;border-radius:999px;background:var(--panel);border:2px solid transparent;cursor:pointer}
+.pill input:checked + span{background:var(--blue);color:var(--on-blue)}
+.pill input:hover + span{border-color:var(--blue)}
+
+label.field{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}@media (max-width:420px){.fields{grid-template-columns:1fr}}
+input[type=text],input[type=email],input[type=tel]{font:500 1rem var(--body);padding:14px;border:2px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);min-width:0}
+input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus{outline:none;border-color:var(--blue)}
+input.bad{border-color:var(--bad)}
+
+.teams{display:flex;flex-wrap:wrap;gap:8px}
+.teams span{background:var(--blue);color:var(--on-blue);font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px}
+section{display:flex;flex-direction:column;gap:16px}
+.label{font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.gifts{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+.gift{display:grid;grid-template-columns:2.2rem 1fr;gap:4px 12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.gift .n{font:400 2rem/1 var(--display);color:var(--blue-text);grid-row:span 3}
+.gift b{font-size:1.1rem}
+.gift em{font-size:.8rem;color:var(--muted);font-weight:600}
+.gift p{color:var(--muted);font-size:.95rem}
+.scores{display:flex;flex-direction:column;gap:14px}
+.score{display:flex;flex-direction:column;gap:6px}
+.score .top{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-variant-numeric:tabular-nums}
+.score .bar{height:10px}
+.score.first .bar i{background:var(--sun)}
+.profile{gap:10px}.profile .score{display:grid;grid-template-columns:minmax(0,11rem) 1fr 2.6rem;align-items:center;gap:12px;font-size:.88rem;font-weight:600}.profile .bar{height:8px}.profile .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}.profile .score.hi .bar i{background:var(--blue)}.profile .score:not(.hi) .bar i{background:var(--muted);opacity:.45}
+@media (max-width:420px){.profile .score{grid-template-columns:minmax(0,8.5rem) 1fr 2.4rem}}
+.share{background:var(--panel);border-radius:4px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.share b{font-size:1.05rem}
+.foot{font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+
+</head><body>
+<div class="wrap">
+  <div class="brand"><div><span class="dot"></span>ROSEDALE</div><small>Serve Teams</small></div>
+
+  <!-- INTRO -->
+  <div id="intro" style="display:contents">
+    <div class="band">
+      <div class="eyebrow">Spiritual Gifts Test</div>
+      <h1>Find your <span class="mark">place.</span></h1>
+      <p>God wired you on purpose, for a purpose. Tell us where your heart already is, then answer 48 quick statements about how often each one is true of you. We'll show you the gifts that stand out in you and where you'd fit best on a Rosedale serve team. It takes about six minutes.</p>
+    </div>
+    <section>
+      <div class="label">Where you could land</div>
+      <div class="areas">
+        <div><b>Connections</b><span>Coffee, guest services, new here, security</span></div>
+        <div><b>Worship</b><span>Choir, band and vocals, prayer team</span></div>
+        <div><b>Media</b><span>Livestream, audio and production</span></div>
+        <div><b>Family Ministries</b><span>Nursery, kids, teens, young adults</span></div>
+        <div><b>Outreach</b><span>Food pantry, deaf ministry, Spanish ministry and more</span></div>
+        <div><b>Next Steps</b><span>Group leaders and next steps team</span></div>
+      </div>
+    </section>
+    <div class="row"><button class="btn" id="start">Start the test</button><span class="note" id="resumeNote"></span></div>
+    <p class="note">"Each of you should use whatever gift you have received to serve others." 1 Peter 4:10</p>
+  </div>
+
+  <!-- HEART -->
+  <div id="heartScreen" hidden style="display:contents">
+    <div class="band">
+      <div class="eyebrow">Before we start</div>
+      <h2>Where's your heart?</h2>
+      <p>Most people already have a sense of where they want to serve. Tap anything that excites you. Your results will show how your gifts line up with it. It's fine to pick nothing.</p>
+    </div>
+    <div class="heart" id="heart"></div>
+    <div class="row"><button class="btn" id="toQuiz">Start the questions</button><button class="link" id="backIntro">Back</button></div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quiz" hidden style="display:contents">
+    <div class="progress">
+      <div class="meta"><span id="count">1 of 48</span><span>Answer for who you are, not who you wish you were</span></div>
+      <div class="bar"><i id="fill"></i></div>
+    </div>
+    <div class="q" id="qtext" aria-live="polite"></div>
+    <div class="opts" id="opts"></div>
+    <div class="row"><button class="link" id="back">Back</button></div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" hidden style="display:contents">
+    <div class="band">
+      <div class="eyebrow">Last step</div>
+      <h2>Who should we follow up with?</h2>
+      <p>Your results go straight to Pastor Moses so he can help you get plugged in on the right team.</p>
+    </div>
+    <div class="fields">
+      <label class="field">First name<input type="text" id="first" autocomplete="given-name" required></label>
+      <label class="field">Last name<input type="text" id="last" autocomplete="family-name" required></label>
+      <label class="field">Email<input type="email" id="email" autocomplete="email" required></label>
+      <label class="field">Mobile phone<input type="tel" id="phone" autocomplete="tel" inputmode="tel" required></label>
+    </div>
+    <p class="err" id="cErr" hidden></p>
+    <div class="row"><button class="btn" id="finish">See my results</button><button class="link" id="back2">Back</button></div>
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results" hidden style="display:contents">
+    <div class="band">
+      <div class="eyebrow" id="rEyebrow">Your best fit</div>
+      <h1 id="rArea"></h1>
+      <p id="rLine"></p>
+      <div class="teams" id="rTeams"></div>
+    </div>
+    <section class="share" id="sent">
+      <b id="sentHead">Sending your results to Pastor Moses</b>
+      <p class="note" id="sentNote">One moment.</p>
+    </section>
+    <section>
+      <div class="label">Your top gifts</div>
+      <div class="gifts" id="rGifts"></div>
+    </section>
+    <section>
+      <div class="label">How you scored in each area</div>
+      <div class="scores" id="rScores"></div>
+    </section>
+    <section>
+      <div class="label">Your full gift profile</div>
+      <div class="scores profile" id="rProfile"></div>
+      <p class="note">A test is a starting point, not the final word. Your gifts get confirmed as you serve and as people who know you see God use you.</p>
+    </section>
+    <div class="row"><button class="btn ghost" id="again">Retake</button></div>
+    <p class="foot">Rosedale Baptist Church · 9202 Philadelphia Road, Baltimore, MD 21237 · rosedalebaptist.org</p>
+  </div>
+</div>
+
+<script>
+const GIFTS={
+ music:{name:"Music",ref:"1 Chronicles 25:7",d:"You lead people into God's presence through music. Your voice or instrument helps a room turn its attention to Jesus."},
+ create:{name:"Creative Communication",ref:"Exodus 35:35",d:"You see fresh ways to show truth through design, video, words and art, and you care that it's done with excellence."},
+ craft:{name:"Craftsmanship",ref:"Exodus 31:3",d:"You make things work with your hands and your know how. Sound, lights, cameras, sets and spaces run because people like you serve faithfully."},
+ teach:{name:"Teaching",ref:"Romans 12:7",d:"You make God's Word clear and simple, so kids, students and adults can understand it and live it out."},
+ shep:{name:"Shepherding",ref:"1 Peter 5:2",d:"You care for people over the long haul. You check in, follow up and walk with others through the hard seasons."},
+ enc:{name:"Encouragement",ref:"Hebrews 10:24",d:"You lift people up. Your words help others keep going and believe God has more for them."},
+ hosp:{name:"Hospitality",ref:"1 Peter 4:9",d:"You make people feel at home. Guests and strangers feel seen and welcomed when you're around."},
+ help:{name:"Helps",ref:"1 Corinthians 12:28",d:"You see what needs doing and you do it. Your faithfulness frees others to use their gifts too."},
+ evang:{name:"Evangelism",ref:"Ephesians 4:11",d:"You love helping people who are far from God meet Jesus and take their very first steps."},
+ mercy:{name:"Mercy",ref:"Romans 12:8",d:"You notice the hurting and the overlooked, and you move toward them with patience and compassion."},
+ lead:{name:"Leadership",ref:"Romans 12:8",d:"You set direction and people follow. You keep a team pointed at the bigger vision."},
+ admin:{name:"Administration",ref:"1 Corinthians 12:28",d:"You turn big goals into clear plans. People and details get organized so the mission moves forward."},
+ faith:{name:"Faith",ref:"1 Corinthians 12:9",d:"You trust God for what looks impossible, and your steady confidence helps others step out too."},
+ interc:{name:"Intercession",ref:"James 5:16",d:"You stand in the gap for people in prayer and expect God to move when His people pray."},
+ disc:{name:"Discernment",ref:"1 Corinthians 12:10",d:"You sense when something is off before others do, and you stay steady and alert to protect people and truth."},
+ give:{name:"Giving",ref:"2 Corinthians 9:7",d:"You love fueling God's work with your resources. Generosity is one of the ways you serve, whatever team you're on."}
+};
+const QS={
+ music:["I come alive when I'm singing or playing music in worship.","People have told me I have real musical ability.","I'd gladly give up a free evening to rehearse with a band."],
+ create:["I'm always thinking of fresh ways to say something through design, video, words or art.","I notice when something looks off and I want to make it beautiful.","I enjoy creating content that helps people see God's truth."],
+ craft:["I enjoy building, fixing or making things with my hands.","I like figuring out how gear works: cameras, sound boards, lights and computers.","When something breaks, I'm the one people call to fix it."],
+ teach:["I love explaining things until they finally click for someone.","I enjoy studying the Bible and passing on what I learn.","I can take a big idea and make it simple for kids or new believers."],
+ shep:["I naturally check in on people and follow up on how they're doing.","I'd love to walk with a small group of people over the long haul.","People come to me when they need guidance."],
+ enc:["I find myself cheering people on and reminding them what God can do.","I can usually tell when someone is discouraged, and I want to lift them up.","A few kind words from me can turn someone's day around."],
+ hosp:["I love making people feel at home, especially people I've never met.","Serving coffee or setting up a welcoming space sounds fun to me.","I notice the person standing alone and I go say hi."],
+ help:["I'd rather do the task that needs doing than be up front.","I see practical needs quickly and jump in.","When I say I'll be there, I'm there."],
+ evang:["I look for chances to talk about Jesus with people who don't know Him.","I enjoy helping someone brand new take their next step.","Inviting people to church comes easily for me."],
+ mercy:["I'm drawn to people who are hurting, sick or overlooked.","I have a lot of patience for people who need extra care, from babies to grandparents.","Someone else's pain moves me to do something about it."],
+ lead:["People tend to follow when I set a direction.","I enjoy casting vision and rallying people around it.","I'm comfortable leading a discussion and keeping it on track."],
+ admin:["I like turning a messy plan into clear steps, lists and schedules.","Organizing an event or a Sunday service sounds fun to me.","When a process isn't working, I want to fix the system."],
+ faith:["I trust God for things that look impossible to other people.","When others panic, my confidence in God stays steady.","I'm willing to step out and take a risk when I sense God leading."],
+ interc:["Praying for others is something I do often and enjoy.","I keep track of the people I'm praying for and follow up with them.","I'd love being part of a team that prays with people on Sundays."],
+ disc:["I notice when something or someone seems off before others do.","I can usually tell when what's being taught doesn't line up with Scripture.","I stay calm and alert in tense moments, and keeping people safe matters to me."],
+ give:["I enjoy giving my money and resources to God's work.","I look for practical needs I can quietly meet.","I manage what I have so I can be more generous."]
+};
+// Area names match the Personal Contact steps in the CCB Serve Process
+const AREAS={
+ connect:{name:"Connections",w:{hosp:1,evang:.7,help:.6,enc:.5,disc:.5},line:"You're wired to make every person who walks through our doors feel welcomed, safe and known.",
+   teams:{"Coffee":["hosp","help"],"Guest Services":["hosp","enc"],"New Here":["evang","hosp"],"Security":["disc","help"]}},
+ worship:{name:"Worship",w:{music:1,interc:.6,enc:.3},line:"You're wired to help our church lift up the name of Jesus, in song and in prayer.",
+   teams:{"Choir":["music","enc"],"Band and Vocals":["music"],"Prayer Team":["interc","faith","mercy"]}},
+ media:{name:"Media",w:{create:1,craft:1,help:.3},line:"You're wired to tell the story of what God is doing at Rosedale and to make every Sunday run well.",
+   teams:{"Livestream":["create","craft"],"Audio and Production":["craft","help"]}},
+ family:{name:"Family Ministries",w:{teach:.9,shep:.8,enc:.6,mercy:.6,help:.5},line:"You're wired to help the next generation know Jesus and to give parents a church they can trust.",
+   teams:{"Nursery":["mercy","help"],"Rosedale Kids":["teach","enc"],"Thrive Teens":["shep","enc","teach"],"Rosedale YA":["shep","lead"]}},
+ outreach:{name:"Outreach",w:{mercy:1,evang:.8,help:.7,give:.5,faith:.4},line:"You're wired to carry the love of Jesus outside our walls and into our city.",
+   teams:{"Food Pantry":["mercy","help"],"Deaf Ministry":["mercy","teach"],"Helping Hands":["help","mercy"],"Spanish Ministry":["evang","shep"],"Recover Baltimore":["mercy","faith","shep"],"Point Church":["evang","lead"]}},
+ next:{name:"Next Steps",w:{shep:.9,lead:.8,teach:.6,admin:.7,interc:.3},line:"You're wired to help people grow deeper in Christ and take their next step.",
+   teams:{"Group Leaders":["lead","teach","shep"],"Next Steps Team":["shep","admin","evang"]}}
+};
+// Heart options. Special Events is a heart choice only.
+const HEART=[
+ ["connect",["Coffee","Guest Services","New Here","Security"]],
+ ["worship",["Choir","Band and Vocals","Prayer Team"]],
+ ["media",["Livestream","Audio and Production"]],
+ ["family",["Nursery","Rosedale Kids","Thrive Teens","Rosedale YA"]],
+ ["outreach",["Food Pantry","Deaf Ministry","Helping Hands","Spanish Ministry","Recover Baltimore","Point Church"]],
+ ["next",["Group Leaders","Next Steps Team"]],
+ ["special",["Special Events"]]
+];
+const HEART_AREA_NAME={special:"Special Events"};
+const areaName=id=>AREAS[id]?AREAS[id].name:HEART_AREA_NAME[id];
+
+const SCALE=["Never","Rarely","Sometimes","Often","Always"];
+const keys=Object.keys(QS);
+const ORDER=[];for(let k=0;k<3;k++)keys.forEach(g=>ORDER.push([g,k]));
+const KEY="rbc-gifts-v3";
+let st={i:0,a:{},heart:[]};
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&s.a)st=Object.assign({heart:[]},s)}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
+const $=id=>document.getElementById(id);
+const screens=["intro","heartScreen","quiz","contact","results"];
+function show(s){screens.forEach(x=>$(x).hidden=x!==s);window.scrollTo(0,0)}
+
+if(Object.keys(st.a).length&&!st.done)$("resumeNote").textContent="Picks up where you left off";
+$("start").onclick=()=>{renderHeart();show("heartScreen")};
+$("backIntro").onclick=()=>show("intro");
+$("toQuiz").onclick=()=>{show("quiz");renderQ()};
+
+function renderHeart(){
+  const h=$("heart");h.innerHTML="";
+  HEART.forEach(([aid,teams])=>{
+    const g=document.createElement("div");g.className="hgroup";
+    const b=document.createElement("b");b.textContent=areaName(aid);g.append(b);
+    const p=document.createElement("div");p.className="pills";
+    teams.forEach(t=>{
+      const key=aid+"|"+t;
+      const l=document.createElement("label");l.className="pill";
+      const c=document.createElement("input");c.type="checkbox";c.checked=st.heart.includes(key);
+      c.onchange=()=>{st.heart=c.checked?[...st.heart,key]:st.heart.filter(x=>x!==key);save()};
+      const s=document.createElement("span");s.textContent=t;
+      l.append(c,s);p.append(l);
+    });
+    g.append(p);h.append(g);
+  });
+}
+
+function renderQ(){
+  const [g,k]=ORDER[st.i];
+  $("count").textContent=(st.i+1)+" of "+ORDER.length;
+  $("fill").style.width=(st.i/ORDER.length*100)+"%";
+  $("qtext").textContent=QS[g][k];
+  const cur=st.a[g+k];
+  $("opts").innerHTML="";
+  SCALE.forEach((lab,v)=>{
+    const b=document.createElement("button");b.className="opt"+(cur===v?" on":"");
+    b.innerHTML="<kbd>"+(v+1)+"</kbd>";b.append(lab);
+    b.onclick=()=>answer(v);$("opts").append(b);
+  });
+}
+function answer(v){
+  const [g,k]=ORDER[st.i];st.a[g+k]=v;save();
+  if(st.i<ORDER.length-1){st.i++;renderQ()}else{goContact()}
+}
+$("back").onclick=()=>{if(st.i>0){st.i--;save();renderQ()}else{renderHeart();show("heartScreen")}};
+document.addEventListener("keydown",e=>{
+  if($("quiz").hidden)return;
+  const n=+e.key;if(n>=1&&n<=5){answer(n-1)}
+  if(e.key==="Backspace"||e.key==="ArrowLeft"){$("back").click()}
+});
+
+const FIELDS=["first","last","email","phone"];
+function goContact(){
+  show("contact");
+  FIELDS.forEach(f=>$(f).value=st[f]||"");
+}
+FIELDS.forEach(f=>$(f).oninput=e=>{st[f]=e.target.value.trim();save();e.target.classList.remove("bad")});
+$("back2").onclick=()=>{st.i=ORDER.length-1;show("quiz");renderQ()};
+$("finish").onclick=()=>{
+  const bad=[];
+  if(!st.first)bad.push("first");
+  if(!st.last)bad.push("last");
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(st.email||""))bad.push("email");
+  if((st.phone||"").replace(/\D/g,"").length<10)bad.push("phone");
+  FIELDS.forEach(f=>$(f).classList.toggle("bad",bad.includes(f)));
+  if(bad.length){$("cErr").hidden=false;$("cErr").textContent="Please add your first and last name, a valid email, and a mobile number so we can follow up with you.";$(bad[0]).focus();return}
+  $("cErr").hidden=true;
+  st.done=true;st.sent=false;save();
+  const r=compute();render(r);send(r);
+};
+
+function giftScores(){
+  const s={};keys.forEach(g=>{let t=0;for(let k=0;k<3;k++)t+=(st.a[g+k]??0);s[g]=t/12});return s;
+}
+function compute(){
+  const gs=giftScores();
+  const heartAreas=[...new Set(st.heart.map(k=>k.split("|")[0]))];
+  const area=Object.entries(AREAS).map(([id,a])=>{
+    let t=0,w=0;for(const g in a.w){t+=gs[g]*a.w[g];w+=a.w[g]}
+    let p=t/w*100;if(heartAreas.includes(id))p=Math.min(100,p+8);
+    return {id,...a,p:Math.round(p)};
+  }).sort((x,y)=>y.p-x.p);
+  const top=area[0];
+  const teams=Object.entries(top.teams).map(([n,gl])=>({n,s:gl.reduce((t,g)=>t+gs[g],0)/gl.length})).sort((a,b)=>b.s-a.s).slice(0,2).map(t=>t.n);
+  const topGifts=keys.slice().sort((a,b)=>gs[b]-gs[a]).slice(0,3);
+  return {gs,area,top,teams,topGifts,heartAreas,heartTeams:st.heart.map(k=>k.split("|")[1])};
+}
+function render(r){
+  const {gs,area,top,teams,topGifts,heartAreas,heartTeams}=r;
+  $("rEyebrow").textContent=st.first?st.first+", your best fit":"Your best fit";
+  $("rArea").innerHTML="";const sp=document.createElement("span");sp.className="mark";sp.textContent=top.name;$("rArea").append(sp);
+  let line=top.line;
+  if(heartAreas.includes(top.id)){line+=" Your gifts confirm what's already on your heart."}
+  else if(heartAreas.length){line+=" You told us your heart is with "+heartTeams.join(", ")+". Your gifts point strongly here too, and Pastor Moses will help you find the right fit."}
+  $("rLine").textContent=line+" Teams to look at:";
+  $("rTeams").innerHTML="";teams.forEach(t=>{const s=document.createElement("span");s.textContent=t;$("rTeams").append(s)});
+
+  $("rGifts").innerHTML="";
+  topGifts.forEach((g,i)=>{
+    const d=document.createElement("div");d.className="gift";
+    d.innerHTML='<span class="n">'+(i+1)+'</span><b></b><em></em><p></p>';
+    d.querySelector("b").textContent=GIFTS[g].name;d.querySelector("em").textContent=GIFTS[g].ref;d.querySelector("p").textContent=GIFTS[g].d;
+    $("rGifts").append(d);
+  });
+  $("rScores").innerHTML="";
+  area.forEach((a,i)=>{
+    const d=document.createElement("div");d.className="score"+(i===0?" first":"");
+    d.innerHTML='<div class="top"><span></span><span>'+a.p+'%</span></div><div class="bar"><i style="width:'+a.p+'%"></i></div>';
+    d.querySelector(".top span").textContent=a.name;$("rScores").append(d);
+  });
+  $("rProfile").innerHTML="";
+  keys.slice().sort((a,b)=>gs[b]-gs[a]).forEach(g=>{
+    const d=document.createElement("div");d.className="score"+(topGifts.includes(g)?" hi":"");
+    const v=Math.round(gs[g]*100);
+    d.innerHTML='<span></span><div class="bar"><i style="width:'+v+'%"></i></div><span class="v">'+v+'</span>';
+    d.firstChild.textContent=GIFTS[g].name;$("rProfile").append(d);
+  });
+  if(st.sent)sentState();
+  show("results");
+}
+function sentState(){
+  $("sentHead").textContent="Your results are on their way to Pastor Moses";
+  $("sentNote").textContent="He'll look at your gifts and where your heart is, and someone from the right team will reach out to you soon about next steps.";
+}
+function send(r){
+  const {gs,area,top,teams,topGifts,heartAreas,heartTeams}=r;
+  const summary=
+    "Heart: "+(heartTeams.length?heartTeams.join(", ")+" ("+heartAreas.map(areaName).join(", ")+")":"None picked")+
+    " | Best fit: "+top.name+" ("+top.p+"%)"+
+    " | Teams to try: "+teams.join(", ")+
+    " | Top gifts: "+topGifts.map(g=>GIFTS[g].name).join(", ")+
+    " | Runner up: "+area[1].name+" ("+area[1].p+"%)"+
+    " | Area scores: "+area.map(a=>a.name+" "+a.p).join(", ")+
+    " | Gift profile: "+keys.slice().sort((a,b)=>gs[b]-gs[a]).map(g=>GIFTS[g].name+" "+Math.round(gs[g]*100)).join(", ");
+  let done=false;
+  const ok=()=>{if(done)return;done=true;st.sent=true;save();sentState()};
+  const fail=()=>{if(done)return;done=true;$("sentHead").textContent="We couldn't send your results";$("sentNote").textContent="Please check your connection and tap Retake, or show this screen to a pastor on Sunday."};
+  try{google.script.run.withSuccessHandler(ok).withFailureHandler(fail).submitResults({first:st.first,last:st.last,email:st.email,phone:st.phone,results:summary})}catch(e){fail()}
+}
+$("again").onclick=()=>{st={i:0,a:{},heart:[],first:st.first,last:st.last,email:st.email,phone:st.phone};save();show("intro");$("resumeNote").textContent=""};
+
+if(st.done&&Object.keys(st.a).length===ORDER.length){render(compute())}
+</script>
+
+</body></html>
