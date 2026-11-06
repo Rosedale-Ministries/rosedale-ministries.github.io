@@ -143,7 +143,7 @@ section{display:flex;flex-direction:column;gap:16px}
       </div>
     </section>
     <div class="row"><button class="btn" id="start">Start the test</button><span class="note" id="resumeNote"></span></div>
-    <p class="note">"Each of you should use whatever gift you have received to serve others." 1 Peter 4:10</p>
+    <p class="note">"As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God." 1 Peter 4:10</p>
   </div>
 
   <!-- HEART -->
@@ -173,7 +173,7 @@ section{display:flex;flex-direction:column;gap:16px}
     <div class="band">
       <div class="eyebrow">Last step</div>
       <h2>Who should we follow up with?</h2>
-      <p>Your results go straight to Pastor Moses so he can help you get plugged in on the right team.</p>
+      <p>Your results go straight to a pastor who will help you get plugged in on the right team.</p>
     </div>
     <div class="fields">
       <label class="field">First name<input type="text" id="first" autocomplete="given-name" required></label>
@@ -194,7 +194,7 @@ section{display:flex;flex-direction:column;gap:16px}
       <div class="teams" id="rTeams"></div>
     </div>
     <section class="share" id="sent">
-      <b id="sentHead">Sending your results to Pastor Moses</b>
+      <b id="sentHead">Sending your results to a pastor</b>
       <p class="note" id="sentNote">One moment.</p>
     </section>
     <section>
@@ -381,7 +381,7 @@ function render(r){
   $("rArea").innerHTML="";const sp=document.createElement("span");sp.className="mark";sp.textContent=top.name;$("rArea").append(sp);
   let line=top.line;
   if(heartAreas.includes(top.id)){line+=" Your gifts confirm what's already on your heart."}
-  else if(heartAreas.length){line+=" You told us your heart is with "+heartTeams.join(", ")+". Your gifts point strongly here too, and Pastor Moses will help you find the right fit."}
+  else if(heartAreas.length){line+=" You told us your heart is with "+heartTeams.join(", ")+". Your gifts point strongly here too, and a pastor will help you find the right fit."}
   $("rLine").textContent=line+" Teams to look at:";
   $("rTeams").innerHTML="";teams.forEach(t=>{const s=document.createElement("span");s.textContent=t;$("rTeams").append(s)});
 
@@ -409,8 +409,8 @@ function render(r){
   show("results");
 }
 function sentState(){
-  $("sentHead").textContent="Your results are on their way to Pastor Moses";
-  $("sentNote").textContent="He'll look at your gifts and where your heart is, and someone from the right team will reach out to you soon about next steps.";
+  $("sentHead").textContent="Your results are on their way to a pastor";
+  $("sentNote").textContent="A pastor will look at your gifts and where your heart is, and your team lead will reach out to you soon about next steps.";
 }
 function send(r){
   const {gs,area,top,teams,topGifts,heartAreas,heartTeams}=r;
