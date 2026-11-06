@@ -652,7 +652,7 @@ function show(n){S=n;pauseAll();
  F.querySelector('.fbody').scrollTop=0}
 function open(){F.classList.add('on');document.documentElement.classList.add('noscroll');show(S===4?4:S)}
 function close(){F.classList.remove('on');document.documentElement.classList.remove('noscroll');pauseAll()}
-window.__openFlow=open;
+window.__openFlow=open;try{if(/(^|[?&])join(=|&|$)/.test(location.search.slice(1))){setTimeout(open,400)}}catch(e){}
 document.getElementById('fNext').onclick=function(){show(Math.min(S+1,4))};
 document.getElementById('fBack').onclick=function(){show(Math.max(S-1,0))};
 document.getElementById('fClose').onclick=close;
