@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Serve Team Lead Hub</title>
-<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_top">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rosedale Baptist Church">
 <meta property="og:title" content="Serve Team Lead Hub">
@@ -13,7 +13,85 @@
 <meta property="og:url" content="https://rosedale-ministries.github.io/leads/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://rosedale-ministries.github.io/icon.png"><link rel="apple-touch-icon" href="https://rosedale-ministries.github.io/icon.png">
-<style>html,body{margin:0;height:100%;background:#F4FAFF}iframe{position:fixed;inset:0;width:100%;height:100%;border:0}</style>
-</head><body>
-<iframe src="https://script.google.com/macros/s/AKfycbyZcXIWT2ponrcMsPd2s4X4Ra908ex_VrjP6-B31SHRRQRZIbNZYTkNqN41o3UGXnSr/exec?page=leads" title="Serve Team Lead Hub" allow="clipboard-write; autoplay; fullscreen" allowfullscreen></iframe>
-</body></html>
+<script>(function(){var API='https://script.google.com/macros/s/AKfycbyZcXIWT2ponrcMsPd2s4X4Ra908ex_VrjP6-B31SHRRQRZIbNZYTkNqN41o3UGXnSr/exec';
+function mk(s,f){return new Proxy({},{get:function(_,k){if(k==='withSuccessHandler')return function(h){return mk(h,f)};if(k==='withFailureHandler')return function(h){return mk(s,h)};
+ return function(){var a=[].slice.call(arguments);fetch(API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({fn:k,args:a})})
+  .then(function(r){return r.json()}).then(function(d){if(d&&d.ok){if(s)s(d.r)}else throw new Error(d&&d.error)}).catch(function(e){if(f)f(e)})}}})}
+window.google=window.google||{};window.google.script={run:mk(null,null)};window.__RPC_SRC=document.currentScript?document.currentScript.textContent:'';})();
+</script>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Serve Team Lead Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#22ABFF;--deep:#0073BB;--ink:#010B13;--line:#E3E6E9;--muted:#4A5560}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Montserrat,Arial,sans-serif;min-height:100vh;display:grid;place-items:center;background:radial-gradient(900px 520px at 85% -5%,#CFEAFF 0,transparent 60%),linear-gradient(#F4FAFF,#fff);color:var(--ink);padding:24px 16px}
+.box{background:#fff;border-radius:26px;padding:40px 36px;width:100%;max-width:420px;border:1px solid var(--line);box-shadow:0 40px 90px -40px rgba(0,115,187,.55)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:1px;margin-bottom:28px}
+.logo .mark{width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--blue);display:grid;place-items:center;font-family:Georgia,serif;font-size:20px}
+.logo small{display:block;font-size:10px;letter-spacing:2.5px;color:var(--muted);font-weight:700}
+h1{font-size:28px;font-weight:800;letter-spacing:-.5px}
+p{color:var(--muted);font-size:15px;margin-top:8px;line-height:1.55}
+label{display:block;font-weight:700;font-size:13px;margin:22px 0 8px}
+input{width:100%;font:600 16px Montserrat,sans-serif;padding:14px 16px;border:2px solid var(--line);border-radius:14px;outline:0}
+input:focus{border-color:var(--blue)}
+#code{letter-spacing:8px;text-align:center;font-size:22px}
+button{width:100%;margin-top:16px;background:var(--deep);color:#fff;border:0;border-radius:999px;padding:15px;font:800 15px Montserrat,sans-serif;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.link{background:none!important;color:var(--deep);padding:8px;margin-top:8px;font-weight:700;font-size:13px}
+.msg{min-height:20px;font-size:14px;font-weight:600;margin-top:14px;color:var(--deep)}
+.msg.err{color:#C0392B}
+.hide{display:none}
+.back{display:block;text-align:center;margin-top:22px;font-size:13px;color:var(--deep);font-weight:700}
+</style>
+</head>
+<body>
+<div>
+<div class="box">
+ <div class="logo" style="background:#063A63;border-radius:18px;padding:16px 18px;justify-content:space-between"><img src="https://lh3.googleusercontent.com/d/1TiMgCoYj3cdAzp2wWlHsoFSvVeKRNMlE" alt="Rosedale Baptist Church" style="height:52px;width:auto"><small style="color:#9fb0bd">TEAM LEAD HUB</small></div>
+ <div id="s1">
+  <h1>Team lead sign in</h1>
+  <p>Enter the email you use in CCB. We'll send you a six digit code.</p>
+  <label for="email">Email</label>
+  <input id="email" type="email" autocomplete="email" placeholder="you@example.com">
+  <button id="send">Send my code</button>
+ </div>
+ <div id="s2" class="hide">
+  <h1>Check your email</h1>
+  <p>Look for a code sent to <b id="sentto"></b>. It expires in 10 minutes. Not seeing it? Check spam, or ask Pastor Richard to add you to the team lead list.</p>
+  <label for="code">Code</label>
+  <input id="code" inputmode="numeric" maxlength="6" autocomplete="one-time-code" placeholder="000000">
+  <button id="verify">Sign in</button>
+  <button class="link" id="again">Use a different email</button>
+ </div>
+ <div class="msg" id="msg"></div>
+</div>
+<a class="back" href="https://rosedale-ministries.github.io/start/">← Back to Serve at Rosedale</a>
+</div>
+<script>
+(function(){
+var K='rbc_lead_token';
+if(!(window.google&&google.script&&google.script.run)){document.getElementById('msg').textContent='Sign in works on the live site. This is a preview.';document.getElementById('send').disabled=true;return}
+var run=google.script.run;
+function $(i){return document.getElementById(i)}
+function msg(t,err){$('msg').textContent=t||'';$('msg').className='msg'+(err?' err':'')}
+function render(r){if(!r||!r.html)return false;try{localStorage.setItem(K,r.token)}catch(e){}var h=String(r.html),sh='<script>'+(window.__RPC_SRC||'')+'<\/script>';h=/<head[^>]*>/i.test(h)?h.replace(/<head[^>]*>/i,function(m){return m+sh}):sh+h;document.open();document.write(h);document.close();return true}
+function busy(b,on){b.disabled=on}
+var t=null;try{t=localStorage.getItem(K)}catch(e){}
+if(t){msg('Signing you in...');run.withSuccessHandler(function(r){if(!render(r)){try{localStorage.removeItem(K)}catch(e){}msg('')}}).withFailureHandler(function(){msg('')}).hub(t)}
+$('send').onclick=function(){var e=$('email').value.trim();if(!/^\S+@\S+\.\S+$/.test(e)){msg('Enter a valid email.',true);return}
+ var b=this;busy(b,true);msg('Sending...');
+ run.withSuccessHandler(function(r){busy(b,false);if(r&&r.error){msg(r.error,true);return}$('sentto').textContent=e;$('s1').classList.add('hide');$('s2').classList.remove('hide');msg('If that email is on the team lead list, a code is on its way.');$('code').focus()})
+  .withFailureHandler(function(){busy(b,false);msg('Something went wrong. Try again in a minute.',true)}).sendCode(e)};
+$('verify').onclick=function(){var e=$('email').value.trim(),c=$('code').value.trim();if(c.length!==6){msg('Enter the six digit code.',true);return}
+ var b=this;busy(b,true);msg('Checking...');
+ run.withSuccessHandler(function(r){busy(b,false);if(!render(r))msg(r&&r.error||'That code did not work. Check it and try again.',true)})
+  .withFailureHandler(function(){busy(b,false);msg('Something went wrong. Try again in a minute.',true)}).verifyCode(e,c)};
+$('again').onclick=function(){$('s2').classList.add('hide');$('s1').classList.remove('hide');msg('')};
+$('email').onkeydown=function(ev){if(ev.key==='Enter')$('send').click()};
+$('code').onkeydown=function(ev){if(ev.key==='Enter')$('verify').click()};
+})();
+</script>
+</body>
+</html>
