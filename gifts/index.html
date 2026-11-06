@@ -134,12 +134,10 @@ section{display:flex;flex-direction:column;gap:16px}
     <section>
       <div class="label">Where you could land</div>
       <div class="areas">
-        <div><b>Connections</b><span>Coffee, guest services, new here, security</span></div>
-        <div><b>Worship</b><span>Choir, band and vocals, prayer team</span></div>
-        <div><b>Media</b><span>Livestream, audio and production</span></div>
+        <div><b>Sunday Experience</b><span>Choir, band and vocals, livestream, audio and production</span></div>
         <div><b>Family Ministries</b><span>Nursery, kids, teens, young adults</span></div>
+        <div><b>Assimilation and Connections</b><span>Coffee, guest services, new here, security, prayer, next steps, group leaders</span></div>
         <div><b>Outreach</b><span>Food pantry, deaf ministry, Spanish ministry and more</span></div>
-        <div><b>Next Steps</b><span>Group leaders and next steps team</span></div>
       </div>
     </section>
     <div class="row"><button class="btn" id="start">Start the test</button><span class="note" id="resumeNote"></span></div>
@@ -280,6 +278,14 @@ const HEART=[
 ];
 const HEART_AREA_NAME={special:"Special Events"};
 const areaName=id=>AREAS[id]?AREAS[id].name:HEART_AREA_NAME[id];
+// The four ministry buckets on the Serve at Rosedale site. Each scoring area rolls up into one.
+const BUCKETS=["Sunday Experience","Family Ministries","Assimilation and Connections","Outreach"];
+const BUCKET_OF={worship:"Sunday Experience",media:"Sunday Experience",family:"Family Ministries",connect:"Assimilation and Connections",next:"Assimilation and Connections",special:"Assimilation and Connections",outreach:"Outreach"};
+const bucketOf=id=>BUCKET_OF[id]||areaName(id);
+const withSub=id=>{const b=bucketOf(id),n=areaName(id);return n&&n!==b?b+", "+n:b};
+function bucketScores(area){
+  return BUCKETS.map(b=>{const subs=area.filter(a=>bucketOf(a.id)===b);const p=subs.length?Math.max(...subs.map(a=>a.p)):0;return {name:b,p,subs}}).sort((x,y)=>y.p-x.p);
+}
 
 const SCALE=["Never","Rarely","Sometimes","Often","Always"];
 const keys=Object.keys(QS);
@@ -299,11 +305,13 @@ $("toQuiz").onclick=()=>{show("quiz");renderQ()};
 
 function renderHeart(){
   const h=$("heart");h.innerHTML="";
-  HEART.forEach(([aid,teams])=>{
+  BUCKETS.forEach(bk=>{
+    const items=[];HEART.forEach(([aid,teams])=>{if(bucketOf(aid)===bk)teams.forEach(t=>items.push([aid,t]))});
+    if(!items.length)return;
     const g=document.createElement("div");g.className="hgroup";
-    const b=document.createElement("b");b.textContent=areaName(aid);g.append(b);
+    const b=document.createElement("b");b.textContent=bk;g.append(b);
     const p=document.createElement("div");p.className="pills";
-    teams.forEach(t=>{
+    items.forEach(([aid,t])=>{
       const key=aid+"|"+t;
       const l=document.createElement("label");l.className="pill";
       const c=document.createElement("input");c.type="checkbox";c.checked=st.heart.includes(key);
@@ -378,9 +386,9 @@ function compute(){
 function render(r){
   const {gs,area,top,teams,topGifts,heartAreas,heartTeams}=r;
   $("rEyebrow").textContent=st.first?st.first+", your best fit":"Your best fit";
-  $("rArea").innerHTML="";const sp=document.createElement("span");sp.className="mark";sp.textContent=top.name;$("rArea").append(sp);
+  $("rArea").innerHTML="";const sp=document.createElement("span");sp.className="mark";sp.textContent=bucketOf(top.id);$("rArea").append(sp);$("rArea").style.fontSize=bucketOf(top.id).length>20?"clamp(2.4rem,10vw,4.2rem)":"";
   let line=top.line;
-  if(heartAreas.includes(top.id)){line+=" Your gifts confirm what's already on your heart."}
+  if(heartAreas.some(h=>bucketOf(h)===bucketOf(top.id))){line+=" Your gifts confirm what's already on your heart."}
   else if(heartAreas.length){line+=" You told us your heart is with "+heartTeams.join(", ")+". Your gifts point strongly here too, and a pastor will help you find the right fit."}
   $("rLine").textContent=line+" Teams to look at:";
   $("rTeams").innerHTML="";teams.forEach(t=>{const s=document.createElement("span");s.textContent=t;$("rTeams").append(s)});
@@ -393,7 +401,7 @@ function render(r){
     $("rGifts").append(d);
   });
   $("rScores").innerHTML="";
-  area.forEach((a,i)=>{
+  bucketScores(area).forEach((a,i)=>{
     const d=document.createElement("div");d.className="score"+(i===0?" first":"");
     d.innerHTML='<div class="top"><span></span><span>'+a.p+'%</span></div><div class="bar"><i style="width:'+a.p+'%"></i></div>';
     d.querySelector(".top span").textContent=a.name;$("rScores").append(d);
@@ -415,12 +423,12 @@ function sentState(){
 function send(r){
   const {gs,area,top,teams,topGifts,heartAreas,heartTeams}=r;
   const summary=
-    "Heart: "+(heartTeams.length?heartTeams.join(", ")+" ("+heartAreas.map(areaName).join(", ")+")":"None picked")+
-    " | Best fit: "+top.name+" ("+top.p+"%)"+
+    "Heart: "+(heartTeams.length?st.heart.map(k=>{const [aid,t]=k.split("|");return t+" ("+withSub(aid)+")"}).join(", "):"None picked")+
+    " | Best fit: "+withSub(top.id)+" ("+top.p+"%)"+
     " | Teams to try: "+teams.join(", ")+
     " | Top gifts: "+topGifts.map(g=>GIFTS[g].name).join(", ")+
-    " | Runner up: "+area[1].name+" ("+area[1].p+"%)"+
-    " | Area scores: "+area.map(a=>a.name+" "+a.p).join(", ")+
+    " | Runner up: "+(()=>{const ru=area.find(a=>bucketOf(a.id)!==bucketOf(top.id))||area[1];return withSub(ru.id)+" ("+ru.p+"%)"})()+
+    " | Area scores: "+bucketScores(area).map(b=>b.name+" "+b.p+(b.subs.length>1?" ("+b.subs.map(a=>a.name+" "+a.p).join(", ")+")":"")).join(", ")+
     " | Gift profile: "+keys.slice().sort((a,b)=>gs[b]-gs[a]).map(g=>GIFTS[g].name+" "+Math.round(gs[g]*100)).join(", ");
   let done=false;
   const ok=()=>{if(done)return;done=true;st.sent=true;save();sentState()};
